@@ -33,15 +33,18 @@ const Banner = () => {
   return (
     <div className="w-10/12 mx-auto pt-4 grid grid-cols-12 gap-4">
       <div className="col-span-8 relative overflow-hidden group hover:text-white">
-        <Image
-          src={gallery1}
-          alt="gallery" 
-          className="transition-all duration-700 ease-in-out transform scale-100 group-hover:scale-105 w-full"
-        />
-        <div className="absolute inset-0 bg-black opacity-50 z-20  hover:opacity-0 ">
+        <div>
+          <Image
+            src={gallery1}
+            alt="gallery"
+            className="transition-all duration-700 ease-in-out transform scale-100 group-hover:scale-105 w-full"
+          />
+        </div>
+        <div className="absolute inset-0 bg-black opacity-50   hover:opacity-0 ">
           {" "}
         </div>
-        <div className="absolute  z-30 left-0  bottom-2  p-4 w-fit  ">
+
+        <div className="absolute   left-0  bottom-2  p-4 w-fit   ">
           <h1
             className={`${Poiret.className} w-40 p-1 text-sm bg-badge text-white flex justify-center `}
           >
@@ -72,7 +75,7 @@ const Banner = () => {
       <div className="col-span-4 flex flex-col items-center gap-2  ">
         {data.map((value, i) => {
           return (
-            <div key={i} className="relative overflow-hidden group">
+            <div key={i} className="relative overflow-hidden group ">
               <Image
                 src={value.image}
                 alt="gallery"
@@ -85,7 +88,7 @@ const Banner = () => {
                 {" "}
               </div>
 
-              <div className=" absolute inset-x-0 bottom-2  left-0 p-2">
+              <div className=" absolute inset-x-0 bottom-2  left-0 p-2 group-hover:opacity-0">
                 <h1
                   className={`${Poiret.className} w-32 p-1 text-sm bg-badge text-white flex justify-center `}
                 >
